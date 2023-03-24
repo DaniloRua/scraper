@@ -3,11 +3,12 @@ const AXIOS = require('axios');
 const cheerio = require('cheerio');
 const express = require('express');
 const app = express();
-const url = 'https://www.theguardian.com/world'
+
 
 
 // firtst example: Get articles from journal website
-AXIOS(url)
+const journalUrl = 'https://www.theguardian.com/world'
+AXIOS(journalUrl)
     .then(response => {
         //load HTML content using axios
         //Cheerio parses markup and provides an API for traversing/manipulating the resulting data structure.
